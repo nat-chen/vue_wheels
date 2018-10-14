@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue UI 组件</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: white;
+      --border-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: #666;
+    }
+    body {
+      font-size: var(--font-size);
+    }
+    #app {
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div id="app">
+    <ui-button icon-name="settings" icon-position="right">
+      按钮
+    </ui-button>
+    <ui-button icon-name="download" icon-position="left">
+      按钮
+    </ui-button>
+    <ui-button icon-name="loading" icon-position="left">
+      加载
+    </ui-button>
+  </div>
+
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_872456_plhtd99zvxk.js"></script>
+</body>
+</html>
