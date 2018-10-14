@@ -1,6 +1,6 @@
 <template>
-  <svg aria-hidden="true">
-    <use :xlink:href="`#icon-${iconName}`"></use>
+  <svg :class="{loading: icon === 'loading'}" aria-hidden="true">
+    <use :xlink:href="`#icon-${icon}`"></use>
   </svg>
 </template>
   
@@ -8,7 +8,7 @@
 
 export default {
   props: {
-    'iconName': {
+    'icon': {
       type: String,
     }
   }
@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style>
+
 .icon {
   width: 1em; height: 1em;
   vertical-align: -0.15em;

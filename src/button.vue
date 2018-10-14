@@ -1,6 +1,6 @@
 <template>
   <button class="ui-button" :class="{[`icon-${iconPosition}`]: true}">
-    <ui-icon class="icon" :icon-name="iconName"></ui-icon>
+    <ui-icon class="icon" :icon="iconName"></ui-icon>
     <div class="content">
       <slot></slot>
     </div>
