@@ -1,6 +1,8 @@
 <template>
-  <button class="ui-button" :class="{[`icon-${iconPosition}`]: true}">
-    <ui-icon class="icon" :icon="iconName"></ui-icon>
+  <button class="ui-button" 
+    @click="$emit('change-icon')"
+    :class="{[`icon-${iconPosition}`]: true}">
+    <ui-icon class="icon" v-if="iconName" :icon="iconName"></ui-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -8,7 +10,6 @@
 </template>
 
 <script>
-
   export default {
     props: {
       'iconName': {
@@ -20,7 +21,7 @@
         validator(value) {
           return value === 'left' || value === 'right';
       }
-    }
+    },
   }
 }
 </script>

@@ -36,12 +36,18 @@
     <ui-button icon-name="settings" icon-position="right">
       按钮
     </ui-button>
-    <ui-button icon-name="download" icon-position="left">
+    <ui-button :icon-name="iconName" @change-icon="change" icon-position="left">
       按钮
     </ui-button>
     <ui-button icon-name="loading" icon-position="left">
       加载
     </ui-button>
+
+    <ui-button-group>
+      <ui-button icon-name="left">上一页</ui-button>
+      <ui-button>更多</ui-button>
+      <ui-button icon-name="right" icon-position="right">下一页</ui-button>
+    </ui-button-group>
   </div>
 
 <script src="./src/app.js"></script>
