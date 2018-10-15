@@ -27,30 +27,50 @@
     #app {
       margin: 20px;
     }
+    .box {
+      margin-top: 20px;
+    }
   </style>
 </head>
 
 <body>
   
   <div id="app">
-    <ui-button icon-name="settings" icon-position="right">
-      按钮
-    </ui-button>
-    <ui-button :icon-name="iconName" @change-icon="change" icon-position="left">
-      按钮
-    </ui-button>
-    <ui-button icon-name="loading" icon-position="left">
-      加载
-    </ui-button>
+    <div class="box">
+      <ui-button icon-name="settings" icon-position="right">
+        按钮
+      </ui-button>
+      <ui-button :icon-name="iconName" @change-icon="change" icon-position="left">
+        按钮
+      </ui-button>
+      <ui-button icon-name="loading" icon-position="left">
+        加载
+      </ui-button>
 
-    <ui-button-group>
-      <ui-button icon-name="left">上一页</ui-button>
-      <ui-button>更多</ui-button>
-      <ui-button icon-name="right" icon-position="right">下一页</ui-button>
-    </ui-button-group>
+      <ui-button-group>
+        <ui-button icon-name="left">上一页</ui-button>
+        <ui-button>更多</ui-button>
+        <ui-button icon-name="right" icon-position="right">下一页</ui-button>
+      </ui-button-group>
+    </div>
+      
+    <div class="box">
+
+      <ui-input value="正常输入"></ui-input>
+      <ui-input value="当前输入不可操作" disabled></ui-input>
+      <ui-input value="输入只读" readonly></ui-input>  
+
+      <ui-input value="出错" error="少于 3 个字符"></ui-input>  
+
+      <ui-input value="change 事件" @input-change="inputChange"></ui-input> 
+
+    </div>
+
+
+
   </div>
 
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_872456_plhtd99zvxk.js"></script>
+<script src="//at.alicdn.com/t/font_872456_44ywghkh97s.js"></script>
 </body>
 </html>

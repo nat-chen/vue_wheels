@@ -6,8 +6,8 @@
 
 <script>
 export default {
+  name: 'GuluButtonGroup',
   mounted() {
-    console.log("here");
     for (let node of this.$el.children) {
       let name = node.nodeName.toLowerCase();
       if (name !== "button") {
@@ -19,7 +19,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ui-button-group {
   display: inline-flex;
   vertical-align: middle;

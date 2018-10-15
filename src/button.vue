@@ -10,7 +10,14 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Icon from './icon.vue';
+
   export default {
+    name: 'GuluButton',
+    components: {
+      'ui-icon': Icon,
+    },
     props: {
       'iconName': {
         type: String,
@@ -27,7 +34,7 @@
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ui-button {
   font-size: var(--font-size);
   height: var(--button-height);

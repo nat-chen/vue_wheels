@@ -1,5 +1,5 @@
 <template>
-  <svg :class="{loading: icon === 'loading'}" aria-hidden="true">
+  <svg class="icon" :class="{loading: icon === 'loading'}" aria-hidden="true">
     <use :xlink:href="`#icon-${icon}`"></use>
   </svg>
 </template>
@@ -7,6 +7,7 @@
 <script>
 
 export default {
+  name: 'GuluIcon',
   props: {
     'icon': {
       type: String,
@@ -15,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 .icon {
   width: 1em; height: 1em;
