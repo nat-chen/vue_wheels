@@ -62,7 +62,11 @@
 
       <ui-input value="出错" error="少于 3 个字符"></ui-input>  
 
-      <ui-input value="change 事件" @input-change="inputChange"></ui-input> 
+      <ui-input value="change 事件" @input-change="inputChange"></ui-input>
+      
+      <ui-input v-model="message"></ui-input>
+      <span style="margin-left: -18px;">{{message}}</span>
+      
 
     </div>
 

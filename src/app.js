@@ -16,6 +16,7 @@ new Vue({
   data: {
     isLoading: true,
     iconName: 'settings',
+    message: 'v-model 双向绑定'
   },
   methods: {
     change() {

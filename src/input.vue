@@ -4,7 +4,8 @@
       :value="value"
       :disabled="disabled"
       :readonly="readonly"
-      @change="$emit('input-change', $event)" />
+      @change="$emit('input-change', $event)" 
+      @input="$emit('input', $event.target.value)"/>
     <template v-if="error">
       <icon icon="error"></icon>
       <span>{{error}}</span>
