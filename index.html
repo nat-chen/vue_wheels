@@ -67,9 +67,22 @@
       <ui-input v-model="message"></ui-input>
       <span style="margin-left: -18px;">{{message}}</span>
       
-
     </div>
 
+    <div class="box">
+      <ui-row>
+        <ui-col></ui-col>
+        <ui-col></ui-col>
+        <ui-col></ui-col>
+      </ui-row>
+
+      <ui-row :gutter="20">
+        <ui-col :span="8"></ui-col>
+        <ui-col :span="8"></ui-col>
+        <ui-col :span="8"></ui-col>
+      </ui-row>
+
+    </div>
 
 
   </div>
