@@ -82,6 +82,25 @@
         <ui-col :span="8"></ui-col>
       </ui-row>
 
+      <p style="font-style: italic; color: tomato; margin-top: 20px">**响应式栅格, 针对不同尺寸: iPhone, iPad, PC**</p>
+      <ui-row :gutter="20">
+        <!-- span 默认尺寸为 phone 端 (xs) -->
+        <ui-col
+          span="24" 
+          :ipad="{span: 8}"
+          :narrow-pc="{span: 4}"
+          :pc="{span: 2}"
+          :wide-pc="{span: 1}"
+        ></ui-col>
+        <ui-col
+          span="24"
+          :ipad="{span: 16}"
+          :narrow-pc="{span: 20}"
+          :pc="{span: 22}"
+          :wide-pc="{span: 23}"
+        ></ui-col>
+      </ui-row>
+
     </div>
 
 
