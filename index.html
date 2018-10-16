@@ -30,6 +30,16 @@
     .box {
       margin-top: 20px;
     }
+    
+    .layout {
+      height: 300px;
+      overflow: hidden;
+    }
+    .layout .demo {
+      border: 1px solid #f7d3ba;
+      background: #ece8d9;
+      min-height: 80px;
+    }
   </style>
 </head>
 
@@ -103,6 +113,27 @@
 
     </div>
 
+    <div class="box layout">
+      <ui-layout>
+        <ui-header class="demo">Header</ui-header>
+        <ui-layout>
+          <ui-sider class="demo">Sider</ui-sider>
+          <ui-content class="demo">Content</ui-content>
+        </ui-layout>
+        <ui-footer class="demo">Footer</ui-footer>      
+      </ui-layout>
+    </div>
+
+    <div class="box layout">
+      <ui-layout>
+        <ui-sider class="demo">Sider</ui-sider>
+        <ui-layout>
+          <ui-header class="demo">Header</ui-header>
+          <ui-content class="demo">Content</ui-content>
+          <ui-footer class="demo">Footer</ui-footer>      
+        </ui-layout>
+      </ui-layout>
+    </div>
 
   </div>
 
