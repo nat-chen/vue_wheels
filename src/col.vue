@@ -10,7 +10,6 @@
 
 let validator = (value) => {
   let keys = Object.keys(value);
-  console.log(keys);
   return keys.every(key => {
     return ['span', 'offset'].includes(key);
   })

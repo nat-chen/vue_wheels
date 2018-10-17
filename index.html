@@ -40,6 +40,18 @@
       background: #ece8d9;
       min-height: 80px;
     }
+
+    .toast button {
+      background: #dd7777;
+      height: var(--button-height);
+      color: #fff;
+      font-size: var(--font-size);
+      border: none;
+      border: 1px solid var(--border-color);
+      padding: 0 8px;
+      border-radius: var(--border-radius);
+      outline: none;
+    }
   </style>
 </head>
 
@@ -133,6 +145,12 @@
           <ui-footer class="demo">Footer</ui-footer>      
         </ui-layout>
       </ui-layout>
+    </div>
+
+    <div class="box toast">
+      <button @click="showToast1">Toast Button</button>
+
+      <button @click="showToast2">Toast Button</button>
     </div>
 
   </div>

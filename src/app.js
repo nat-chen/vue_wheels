@@ -10,6 +10,7 @@ import Footer from './footer.vue';
 import Header from './header.vue';
 import Layout from './layout.vue';
 import Sider from './sider.vue';
+import Plugin from './plugin.js';
 
 Vue.component('ui-button', Button);
 Vue.component('ui-icon', Icon);
@@ -22,6 +23,7 @@ Vue.component('ui-footer', Footer)
 Vue.component('ui-header', Header)
 Vue.component('ui-layout', Layout)
 Vue.component('ui-sider', Sider)
+Vue.use(Plugin);
 
 
 
@@ -39,6 +41,22 @@ new Vue({
     },
     inputChange(event) {
       console.log(1);
+    },
+    showToast1() {
+      this.$toast('你有一条新消息', {
+        enableHtml: false,
+        closeButton: {
+          text: '按我',
+          callback: function() {
+            alert('Toast 回调');
+          }
+        }
+      });
+    },
+    showToast2() {
+      this.$toast('自定义消息', {
+        position: 'middle',
+      });
     }
   }
 });
