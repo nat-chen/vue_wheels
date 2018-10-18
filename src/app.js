@@ -11,6 +11,12 @@ import Header from './header.vue';
 import Layout from './layout.vue';
 import Sider from './sider.vue';
 import Plugin from './plugin.js';
+import Tabs from './tabs.vue';
+import TabsBody from './tabs-body.vue';
+import TabsHead from './tabs-head.vue';
+import TabsItem from './tabs-item.vue';
+import TabsPane from './tabs-pane.vue';
+
 
 Vue.component('ui-button', Button);
 Vue.component('ui-icon', Icon);
@@ -23,8 +29,13 @@ Vue.component('ui-footer', Footer)
 Vue.component('ui-header', Header)
 Vue.component('ui-layout', Layout)
 Vue.component('ui-sider', Sider)
-Vue.use(Plugin);
+Vue.component('ui-tabs', Tabs)
+Vue.component('ui-tabs-body', TabsBody)
+Vue.component('ui-tabs-head', TabsHead)
+Vue.component('ui-tabs-item', TabsItem)
+Vue.component('ui-tabs-pane', TabsPane)
 
+Vue.use(Plugin);
 
 
 new Vue({
@@ -32,7 +43,8 @@ new Vue({
   data: {
     isLoading: true,
     iconName: 'settings',
-    message: 'v-model 双向绑定'
+    message: 'v-model 双向绑定',
+    selectedTab: 'tab-1'
   },
   methods: {
     change() {
@@ -40,7 +52,7 @@ new Vue({
       this.iconName = this.isLoading ? 'loading' : 'settings'
     },
     inputChange(event) {
-      console.log(1);
+      console.log('Listening input change');
     },
     showToast1() {
       this.$toast('你有一条新消息', {

@@ -153,6 +153,22 @@
       <button @click="showToast2">Toast Button</button>
     </div>
 
+    <div class="box">
+      <ui-tabs :selected.sync="selectedTab">
+        <ui-tabs-head>
+          <template slot="actions"><button>Settings</button></template>
+          <ui-tabs-item name="tab-1"> Tab 1</ui-tabs-item>
+          <ui-tabs-item name="tab-2" disabled>Tab 2</ui-tabs-item> 
+          <ui-tabs-item name="tab-3">Tab 3</ui-tabs-item>
+        </ui-tabs-head>
+        <ui-tabs-body>
+          <ui-tabs-pane name="tab-1">Tab 1 Content</ui-tabs-pane>
+          <ui-tabs-pane name="tab-2">Tab 2 Content</ui-tabs-pane>
+          <ui-tabs-pane name="tab-3">Tab 3 Content</ui-tabs-pane>
+        </ui-tabs-body>
+      </ui-tabs>
+    </div>
+
   </div>
 
 <script src="./src/app.js"></script>
