@@ -52,6 +52,11 @@
       border-radius: var(--border-radius);
       outline: none;
     }
+
+    .popover-wrapper {
+      margin-top: 80px;
+    }
+
   </style>
 </head>
 
@@ -153,7 +158,7 @@
       <button @click="showToast2">Toast Button</button>
     </div>
 
-    <div class="box">
+    <div class="box tabs-wrapper">
       <ui-tabs :selected.sync="selectedTab">
         <ui-tabs-head>
           <template slot="actions"><button>Settings</button></template>
@@ -167,6 +172,21 @@
           <ui-tabs-pane name="tab-3">Tab 3 Content</ui-tabs-pane>
         </ui-tabs-body>
       </ui-tabs>
+    </div>
+
+    <div class="box popover-wrapper">
+      <ui-popover>
+        <template slot="content">
+          <div>Content 1</div>
+        </template>
+        <ui-button>Button 1</ui-button>
+      </ui-popover>
+      <ui-popover>
+        <template slot="content">
+          <div>Content 2</div>
+        </template>
+        <ui-button>Button 2</ui-button>
+      </ui-popover>
     </div>
 
   </div>
