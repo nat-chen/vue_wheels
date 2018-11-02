@@ -17,6 +17,8 @@ import TabsHead from './tabs-head.vue';
 import TabsItem from './tabs-item.vue';
 import TabsPane from './tabs-pane.vue';
 import Popover from './popover.vue';
+import CollapseItem from './collapse-item.vue';
+import Collapse from './collapse.vue';
 
 
 Vue.component('ui-button', Button);
@@ -36,6 +38,9 @@ Vue.component('ui-tabs-head', TabsHead)
 Vue.component('ui-tabs-item', TabsItem)
 Vue.component('ui-tabs-pane', TabsPane)
 Vue.component('ui-popover', Popover)
+Vue.component('ui-collapse', Collapse)
+Vue.component('ui-collapse-item', CollapseItem)
+
 
 Vue.use(Plugin);
 
@@ -46,7 +51,7 @@ new Vue({
     isLoading: true,
     iconName: 'settings',
     message: 'v-model 双向绑定',
-    selectedTab: 'tab-1'
+    selectedTab: ['1'],
   },
   methods: {
     change() {

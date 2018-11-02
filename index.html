@@ -174,7 +174,7 @@
       </ui-tabs>
     </div>
 
-    <div class="box popover-wrapper">
+    <!-- <div class="box popover-wrapper">
       <ui-popover>
         <template slot="content">
           <div>Content 1</div>
@@ -187,8 +187,16 @@
         </template>
         <ui-button>Button 2</ui-button>
       </ui-popover>
-    </div>
+    </div> -->
 
+    <div class="box collapse-wrapper">
+      <ui-collapse :selected.sync="selectedTab">
+        <ui-collapse-item title="标题一" name="1">内容一</ui-collapse-item>
+        <ui-collapse-item title="标题二" name="2">内容二</ui-collapse-item>
+        <ui-collapse-item title="标题三" name="3">内容三</ui-collapse-item>
+      </ui-collapse>
+      {{selectedTab}}
+    </div>
   </div>
 
 <script src="./src/app.js"></script>
