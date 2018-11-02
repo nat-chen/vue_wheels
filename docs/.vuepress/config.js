@@ -10,16 +10,20 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: '入门',
+        title: '起步',
         children: [
-          '/install/',
           '/get_started/',
         ]
       },
       {
         title: '组件',
         children: [
-          '/components/button',
+          '/components/tabs',
+          '/components/input',
+          '/components/grid',
+          '/components/layout',
+          '/components/toast',
+          '/components/tabs',
         ]
       }
     ]

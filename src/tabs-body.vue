@@ -3,18 +3,15 @@
     <slot></slot>
   </div>
 </template>
-
 <script>
-
-export default {
-  name: 'GuluTabsBody',
-  inject: ['eventBus'],
-  create() {
-
+  export default {
+    name: 'GuluTabsBody',
+    inject: ['eventBus'],
+    created(){
+    }
   }
-}
 </script>
-
-<style lang="scss" scoped>
-
+<style>
+  .tabs-body {
+  }
 </style>
