@@ -1,6 +1,5 @@
 import Toast from './toast'
 
-
 let currentToast
 
 export default {
@@ -20,29 +19,6 @@ export default {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* helpers */
 function createToast ({Vue, message, propsData, onClose}) {

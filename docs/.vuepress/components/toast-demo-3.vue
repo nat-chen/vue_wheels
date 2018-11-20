@@ -50,14 +50,9 @@
 
           methods: {
             onClickButton () {
-              this.$toast('你知道我在等你吗？', {
-                closeButton: {
-                  text: '知道了',
-                  callback: () => {
-                    console.log('他说知道了')
-                  }
-                }
-              })
+              this.$toast('<strong style="color:red;">加粗的提示</strong>', {
+                enableHtml: true
+              });
             }
           },
       `.replace(/^ {8}/gm, '').trim()
